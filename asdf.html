@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HTML5 시맨틱 태그 레이아웃</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #222;
+        }
+
+        /* Header */
+        header {
+            background-color: #3f5551;
+            color: white;
+            padding: 15px;
+        }
+
+        /* Nav */
+        nav {
+            background-color: #70873f;
+            padding: 12px 15px;
+        }
+
+        /* section과 aside를 항상 좌우 배치 */
+        main {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            background-color: #dfe7d8;
+        }
+
+        /* 왼쪽 영역 */
+        section {
+            flex: 1;
+            min-width: 0;
+            padding: 15px;
+            background-color: #dfe7d8;
+        }
+
+        /* Article */
+        article {
+            background-color: #c7d3c1;
+            border: 1px solid #aab7a5;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        /* 오른쪽 Aside */
+        aside {
+            width: 25%;
+            min-width: 120px;
+
+            padding: 15px;
+            background-color: #d5ded0;
+
+            /* 절대 아래로 내려가지 않게 */
+            flex-shrink: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3f5551;
+            color: white;
+            padding: 15px;
+        }
+
+        h3 {
+            margin-top: 5px;
+        }
+
+        /*
+         화면이 작아져도 aside를 아래로 내리지 않음
+        */
+        @media screen and (max-width: 768px) {
+
+            main {
+                flex-direction: row;
+            }
+
+            section {
+                flex: 1;
+                min-width: 0;
+            }
+
+            aside {
+                width: 120px;
+                min-width: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    Header 영역
+</header>
+
+<nav>
+    Nav 영역
+</nav>
+
+<main>
+
+    <section>
+
+        <h3>Section1 영역</h3>
+
+        <p>
+            section 태그는 문서 내에서 하나의 제목 중심의
+            내용들을 그룹화하기 위해 사용한다.
+            하나의 section은 페이지 영역 내의 주제를 가지며
+            보통 제목 태그를 포함한다.
+        </p>
+
+        <h3>Section2 영역</h3>
+
+        <p>
+            내용 구성에 따라 section 태그 안에 article 태그를,
+            또는 article 태그 안에 section 태그를
+            포함시킬 수 있다.
+        </p>
+
+        <article>
+            <h3>Article1 영역</h3>
+
+            <p>
+                article 태그는 웹 페이지 안에서의 개별 내용
+                단위를 지정한다. 독립적으로 사용할 수 있는
+                내용을 표현할 때 사용한다.
+            </p>
+        </article>
+
+    </section>
+
+
+    <aside>
+
+        <h3>Aside 영역</h3>
+
+        <p>
+            aside 태그는 페이지의 주요 내용과
+            직접적인 관련성이 적은 내용을 지정한다.
+            광고나 관련 링크 등의 부가적인 내용을
+            표시할 때 사용한다.
+        </p>
+
+    </aside>
+
+</main>
+
+
+<footer>
+    Footer 영역
+</footer>
+
+</body>
+</html>
