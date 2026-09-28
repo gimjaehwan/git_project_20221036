@@ -1,0 +1,3 @@
+https://developer.mozilla.org/ko/ HTML, CSS, JavaScript 사용법을 확인
+https://fonts.google.com/?subset=korean 무료 한글 글꼴을 찾아 적용
+https://opentutorials.org/course/1 코드 강좌
